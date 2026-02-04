@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+
+    --heading: #0f172a;
+    --sub-heading: #334155;
+    --foreground: #475569;
+
+    --card: #f8fafc;
+    --card-foreground: #475569;
+
+    --popover: #f8fafc;
+    --popover-foreground: #475569;
+
+    --primary: #fb782f;
+    --primary-foreground: #ffffff;
+    --primary-hover: #f56a1f;
+
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --muted-hover: #e2e8f0;
+
+    --accent: #001f60;
+    --accent-foreground: #ffffff;
+
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+
+    --border: #e2e8f0;
+    --input: #cbd5f5;
+    --ring: #fb782f;
+
+    --radius: 0.65rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sofia), sans-serif;
+  color: var(--heading);
+}
