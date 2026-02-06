@@ -103,7 +103,7 @@ export function NewsSection() {
                     className={`${item.colorBg || "bg-navy-900"} p-8 text-white text-center min-h-56 flex items-center justify-center`}
                   >
                     <h3 className="text-2xl font-bold leading-tight">
-                      {item.headerText}
+                      {item.title}
                     </h3>
                     {item.hearts && (
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1">
