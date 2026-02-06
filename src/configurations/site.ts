@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Zentro Solutions.",
+  name: "Zentro Solutions",
   shortName: "Zentro",
-  title: "Zentro Solutions. | Never Miss a Call. Never Miss a Client.",
+  title: "Zentro Solutions | Every Call Answered. Every Customer Covered.",
   description:
-    "Zentro Solutions. provides 24/7 live human call answering, chat, email, and social media message support for businesses of all sizes. Capture every lead, book more appointments, and deliver exceptional customer experiences—without missing a single inquiry.",
+    "Zentro Solutions provides live, 24/7 human coverage for calls, chat, email, and social media messages for businesses of any size. Capture every lead, book more appointments, and deliver exceptional customer experiences without missing a single inquiry.",
 
-  tagline: "24/7 Live Human Support for Growing Businesses",
+  tagline: "Live Human Support, 24/7, for Growing Businesses",
 
   url: process.env.NEXT_PUBLIC_SITE_URL,
   ogImage: "/favicons/og-image.png",
@@ -28,18 +28,18 @@ export const siteConfig = {
     "outsourced receptionist",
     "small business answering service",
     "enterprise call handling",
-    "Zentro Solutions.",
+    "Zentro Solutions",
   ],
 
   authors: [
     {
-      name: "Zentro Solutions.",
+      name: "Zentro Solutions",
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
   ],
 
-  creator: "TechSaws",
-  publisher: "TechSaws",
+  creator: "Zentro Solutions",
+  publisher: "Zentro Solutions",
 
   language: "en-US",
   locale: "en_US",
@@ -56,16 +56,16 @@ export const siteConfig = {
   },
 
   features: [
-    "24/7 Live Human Call Answering",
-    "Inbound & Outbound Call Handling",
-    "Appointment Scheduling & Booking",
-    "Lead Capture & Qualification",
-    "Live Chat Support",
-    "Email & Social Media Message Handling",
-    "CRM & Calendar Integration",
-    "Custom Call Scripts & Workflows",
-    "Scalable Support Teams",
-    "Secure & Confidential Operations",
+    "Around-the-clock live human call coverage",
+    "Incoming and outgoing call management",
+    "Scheduling and booking appointments",
+    "Lead capture and screening",
+    "Real-time live chat support",
+    "Email and social message management",
+    "CRM and calendar integrations",
+    "Tailored call scripts and workflows",
+    "Teams that scale with you",
+    "Secure, confidential operations",
   ],
 
   seoDefaults: {

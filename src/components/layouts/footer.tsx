@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { Button } from "../ui/button";
@@ -14,9 +14,9 @@ function Footer() {
           </div>
 
           <p className="text-sm text-muted-foreground max-w-xs">
-            Zentro Solutions offers 24/7 live human support for calls, chat,
-            email, and social media so you never miss a lead, appointment, or
-            customer inquiry.
+            With Zentro Solutions, live humans cover calls, chat, email, and
+            social media 24/7 so leads, appointments, and customer inquiries
+            are never missed.
           </p>
 
           <div className="flex items-center gap-4 mt-4">
@@ -43,7 +43,7 @@ function Footer() {
 
         <div>
           <h4 className="font-heading text-sm font-bold text-heading mb-6 uppercase">
-            Pages
+            Site Navigation
           </h4>
           <ul className="space-y-4 text-sm font-medium">
             <li>
@@ -53,12 +53,12 @@ function Footer() {
             </li>
             <li>
               <Link href="/about" className="hover:text-primary transition">
-                About us
+                About Zentro Solutions
               </Link>
             </li>
             <li>
               <Link href="/pricing" className="hover:text-primary transition">
-                Pricing
+                Pricing & Plans
               </Link>
             </li>
           </ul>
@@ -66,11 +66,12 @@ function Footer() {
 
         <div className="lg:col-span-1 md:col-span-3 col-span-1">
           <h4 className="ffont-heading text-sm font-bold text-heading uppercase mb-2">
-            Subscribe to updates
+            Subscribe for news
           </h4>
 
           <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-            Get product updates, pricing changes, and feature launches. No spam.
+            Product updates, pricing changes, and feature launches - sent to you.
+            No spam.
           </p>
 
           <form className="flex gap-2 w-full">
@@ -81,7 +82,7 @@ function Footer() {
               required
             />
             <Button type="submit" className="h-12 px-4 flex-shrink-0">
-              Subscribe
+              Join the list
             </Button>
           </form>
         </div>
@@ -97,13 +98,13 @@ function Footer() {
             href="#"
             className="text-muted-foreground hover:text-primary transition"
           >
-            Privacy policy
+            Privacy Statement
           </a>
           <a
             href="#"
             className="text-muted-foreground hover:text-primary transition"
           >
-            Terms of use
+            Terms of Service
           </a>
         </div>
       </div>
@@ -112,3 +113,5 @@ function Footer() {
 }
 
 export default Footer;
+
+
