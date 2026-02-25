@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+
+import FaqImg from "../../../../public/images/faq-img.jpg";
 
 export function AboutFAQSection() {
   const [expandedIndex, setExpandedIndex] = useState(0);
@@ -73,14 +76,7 @@ export function AboutFAQSection() {
 
         <div className="">
           <div className="relative aspect-video rounded-xl overflow-hidden">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Moments Matter - What it's like being at Zentro Solutions"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <Image src={FaqImg} alt="Ask Zentro Solutions." className="w-full h-full object-cover object-center"/>
           </div>
         </div>
       </div>
