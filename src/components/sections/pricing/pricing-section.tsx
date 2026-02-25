@@ -2,9 +2,9 @@
 
 import React from "react";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, PhoneCall } from "lucide-react";
 import { FormEvent, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function PricingSection() {
   const [formData, setFormData] = useState({
@@ -29,127 +29,136 @@ export function PricingSection() {
   };
 
   return (
-    <section className="py-16 sm:py-[100px] px-6 md:px-12" style={{ backgroundColor: "#002362" }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
-          {/* Left Column */}
-          <div className="space-y-5 sm:space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              Plans start at $99 per month
-            </h1>
-            <p className="text-white leading-relaxed text-base sm:text-lg">
-              With{" "}
-              <span className="text-white font-semibold">Zentro Solutions</span>
-              , you decide how your calls are handled: real people delivering a
-              human touch or AI technology designed for speed and scale. Want
-              to learn which option fits you best? Call{" "}
-              <a
-                href="tel:+18774692551"
-                className="font-bold text-white underline"
-              >
-                (877) 469-2551
-              </a>{" "}
-              or fill out this form.
-            </p>
+    <section className="py-16 sm:py-[100px] layout-standard">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
+        <div className="space-y-5 sm:space-y-6">
+          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            Plans Start at <br />{" "}
+            <span className="text-primary font-extrabold">$349</span> / month
+          </h1>
+          <p className="text-white/80 text-lg md:text-2xl !leading-relaxed">
+            With{" "}
+            <span className="text-white font-semibold">
+              Zentro Solutions<span className="text-primary">.</span>
+            </span>
+            , you decide how your calls are handled: real people delivering a
+            human touch or AI technology designed for speed and scale. Want to
+            learn which option fits you best? Call or fill out this form.
+          </p>
+
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 w-full sm:w-auto">
+            <span className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition md:order-1 order-2 w-full sm:w-auto cursor-pointer">
+              <PhoneCall
+                strokeWidth={3}
+                className="mr-2 -translate-y-[1px]"
+                size={16}
+              />{" "}
+              Call Now
+            </span>
+
+            <a
+              href="/about"
+              className="inline-flex items-center bg-black text-primary-foreground justify-center rounded-lg border border-border px-6 py-3 text-sm font-semibold hover:bg-black/80 transition md:order-2 order-1 w-full sm:w-auto group border-none"
+            >
+              See Pricing Details{" "}
+              <ArrowDown
+                strokeWidth={3}
+                className="ml-2 text-primary -translate-y-[1px] group-hover:animate-bounce"
+                size={16}
+              />
+            </a>
           </div>
+        </div>
 
-          {/* Right Column - Form */}
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Given name
-                </label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Surname
-                </label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
-                />
-              </div>
-            </div>
-
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Company
+              <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+                Given name
               </label>
               <input
                 type="text"
-                name="company"
-                value={formData.company}
+                name="firstName"
+                value={formData.firstName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
+                className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Email address
+              <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+                Surname
               </label>
               <input
-                type="email"
-                name="email"
-                value={formData.email}
+                type="text"
+                name="lastName"
+                value={formData.lastName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
+                className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
               />
             </div>
+          </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Phone
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
-              />
-            </div>
+          <div>
+            <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+              Company
+            </label>
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
+            />
+          </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Which service do you need?
-              </label>
-              <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-white rounded bg-transparent text-white"
-              >
-                <option value="">Select an option</option>
-                <option value="virtual-receptionist">
-                  Virtual Receptionist Service
-                </option>
-                <option value="call-answering">Call Answering Service</option>
-                <option value="customer-support">Customer Support Service</option>
-              </select>
-            </div>
+          <div>
+            <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+              Email address
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
+            />
+          </div>
 
-            <div className="flex justify-end pt-4">
-              <button
-                type="submit"
-                className="px-8 py-3 border-2 border-white rounded-full font-medium text-white hover:bg-white hover:text-gray-900 transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
-              >
-                See pricing details <ArrowRight size={20} />
-              </button>
-            </div>
-          </form>
-        </div>
+          <div>
+            <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm md:text-base font-medium text-white mb-2 uppercase font-heading">
+              Which service do you need?
+            </label>
+            <input
+              type="text"
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border-4 border-accent rounded-lg bg-transparent text-white focus-within:outline-none focus-within:ring-0"
+            />
+          </div>
+
+          <div className="flex justify-end pt-4">
+            <Button
+              type="submit"
+              className="!px-8 !py-6 bg-primary rounded-full text-heading hover:bg-primary-hover text-sm md:text-base font-bold"
+            >
+              Submit Your Form
+            </Button>
+          </div>
+        </form>
       </div>
     </section>
   );

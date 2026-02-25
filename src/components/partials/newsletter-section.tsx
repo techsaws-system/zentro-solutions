@@ -28,13 +28,14 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="mb-[7rem]">
+      <div className="max-w-2xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#001a4d] mb-6">
-            Stay current on everything Zentro Solutions.
+          <h2 className="font-heading text-3xl md:text-4xl text-heading lg:text-5xl font-bold leading-tight tracking-tight mb-6">
+            Stay current on <span className="text-accent">everything</span> Zentro Solutions
+            <span className="text-primary">.</span>
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg font-medium">
             Get the latest from Zentro Solutions in our monthly newsletter,
             Minutes - including tips, insights, in-depth how-tos, and more.
           </p>
@@ -49,7 +50,7 @@ export function NewsletterSection() {
               value={formData.firstName}
               onChange={handleChange}
               placeholder="First name (required)"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E85D75] focus:border-transparent placeholder-gray-400"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400"
               required
             />
             <input
@@ -58,7 +59,7 @@ export function NewsletterSection() {
               value={formData.lastName}
               onChange={handleChange}
               placeholder="Last name (required)"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E85D75] focus:border-transparent placeholder-gray-400"
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400"
               required
             />
           </div>
@@ -70,7 +71,7 @@ export function NewsletterSection() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Email address (required)"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E85D75] focus:border-transparent placeholder-gray-400"
+            className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400"
             required
           />
 
@@ -96,21 +97,21 @@ export function NewsletterSection() {
                 name="terms"
                 checked={formData.terms}
                 onChange={handleChange}
-                className="w-5 h-5 mt-0.5 border border-gray-300 rounded focus:ring-2 focus:ring-[#E85D75]"
+                className="w-5 h-5 mt-0.5 border border-border rounded focus:ring-2 focus:ring-primary"
                 required
               />
-              <span className="text-gray-700">
+              <span>
                 I agree to the Zentro Solutions{" "}
                 <a
                   href="#privacy"
-                  className="text-[#FF9500] hover:underline font-semibold"
+                  className="text-primary hover:underline font-semibold"
                 >
                   privacy statement
                 </a>{" "}
                 and{" "}
                 <a
                   href="#terms"
-                  className="text-[#FF9500] hover:underline font-semibold"
+                  className="text-primary hover:underline font-semibold"
                 >
                   terms of service
                 </a>
@@ -119,11 +120,10 @@ export function NewsletterSection() {
             </label>
           </div>
 
-          {/* Submit Button */}
           <div className="pt-4">
             <Button
               type="submit"
-              className="w-full md:w-auto px-8 py-3 bg-[#E85D75] hover:bg-[#d14960] text-white font-bold rounded-full transition-colors"
+              className="w-full md:w-auto px-8 py-3 bg-secondary hover:bg-secondary-hover text-white font-bold rounded-full transition-colors"
             >
               Join the list
             </Button>

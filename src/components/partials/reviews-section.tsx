@@ -84,8 +84,8 @@ export function ReviewsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
 
-  const CARD_WIDTH = 420; // width + gap
-  const SPEED = 0.2; // smooth and fast
+  const CARD_WIDTH = 420;
+  const SPEED = 0.1;
 
   const items = [...REVIEWS, ...REVIEWS];
 
@@ -101,35 +101,25 @@ export function ReviewsSection() {
   });
 
   return (
-    <section className="w-full bg-white py-24 md:py-28 lg:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12">
-        {/* Heading */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#102259] tracking-tight mb-4">
-            Trusted by growth-focused businesses
-          </h2>
-          <p className="text-base md:text-lg lg:text-xl text-[#102259]/70 max-w-3xl mx-auto">
-            Authentic feedback from teams that count on Zentro Solutions daily.
-          </p>
-        </div>
+    <section className="layout-standard section-padding-standard my-8 mb-0">
+      <h2 className="font-heading text-3xl md:text-4xl text-heading lg:text-5xl font-bold leading-tight tracking-tight mb-8 max-w-7xl mx-auto text-center">
+        Trusted by
+        <span className="text-accent"> Growth Focused Businesses</span>
+      </h2>
 
-        {/* Carousel */}
-        <div
-          ref={containerRef}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          className="relative overflow-hidden"
-        >
-          <motion.div
-            style={{ x }}
-            className="flex gap-10 will-change-transform"
-          >
-            {items.map((review, index) => (
-              <div
-                key={index}
-                className="
+      <div
+        ref={containerRef}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        className="relative overflow-hidden py-12"
+      >
+        <motion.div style={{ x }} className="flex gap-10 will-change-transform">
+          {items.map((review, index) => (
+            <div
+              key={index}
+              className="
                   min-w-[300px] max-w-[300px]
-                  sm:min-w-[340px] sm:max-w-[340px]
+                  md:min-w-[340px] md:max-w-[340px]
                   lg:min-w-[380px] lg:max-w-[380px]
                   rounded-[24px]
                   border border-[#102259]/10
@@ -138,25 +128,24 @@ export function ReviewsSection() {
                   hover:shadow-[0_24px_60px_rgba(16,34,89,0.12)]
                   transition-all duration-300
                 "
-              >
-                <Stars rating={review.rating} />
+            >
+              <Stars rating={review.rating} />
 
-                <p className="text-lg md:text-xl leading-relaxed text-[#102259]/90 mb-8">
-                  "{review.quote}"
+              <p className="text-lg md:text-xl leading-relaxed mb-8">
+                &quot;{review.quote}&quot;
+              </p>
+
+              <div>
+                <p className="font-semibold text-heading text-base md:text-lg">
+                  {review.name}
                 </p>
-
-                <div>
-                  <p className="font-semibold text-[#102259] text-base md:text-lg">
-                    {review.name}
-                  </p>
-                  <p className="text-sm md:text-base text-[#102259]/65">
-                    {review.role}, {review.company}
-                  </p>
-                </div>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {review.role}, {review.company}
+                </p>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

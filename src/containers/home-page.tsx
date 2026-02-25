@@ -5,10 +5,9 @@ import CollaborationSection from "@/components/sections/home/collaboration-secti
 import AboutSection from "@/components/sections/home/about-section";
 import ServicesSection from "@/components/sections/home/services-section";
 import { FeaturesCapabilitiesSection } from "@/components/sections/home/future-capabilities";
-import { RubyBenefitsSection } from "@/components/sections/home/ruby-benefits";
-import { RubyStatsSection } from "@/components/sections/home/ruby-stats";
 import { ReviewsSection } from "@/components/partials/reviews-section";
 import { NewsletterSection } from "@/components/partials/newsletter-section";
+import BenefitsSection from "@/components/sections/home/benefits-section";
 
 function HomePage() {
   return (
@@ -20,11 +19,11 @@ function HomePage() {
         <ServicesSection />
       </Canvas01>
       <FeaturesCapabilitiesSection />
-      <RubyBenefitsSection />
-      <RubyStatsSection />
+      <Canvas01>
+        <BenefitsSection />
+      </Canvas01>
       <ReviewsSection />
       <NewsletterSection />
-
     </main>
   );
 }

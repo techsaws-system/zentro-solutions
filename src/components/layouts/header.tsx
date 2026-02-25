@@ -4,14 +4,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 
+import Logo from "../../../public/favicons/logo.png"
+
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Pricing", href: "/pricing" },
 ];
 
@@ -31,12 +34,12 @@ function Header() {
       )}
     >
       <div className="layout-standard h-[90px] flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-heading lg:text-3xl text-xl font-bold text-heading tracking-tight"
-        >
-          Zentro Solutions
-          <span className="text-primary">.</span>
+        <Link href="/">
+          <Image
+            src={Logo}
+            alt="Zentro Solutions | Every Call Answered. Every Customer Covered. h-auto"
+            height={70}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center lg:gap-8 gap-4">
@@ -59,12 +62,14 @@ function Header() {
         <div className="flex items-center gap-3 relative">
           <Link
             href="mailto:info@zentrosolutions.com"
-            className="lg:inline-flex text-sm font-medium hover:text-accent transition max-lg:hidden"
+            className="lg:inline-flex text-sm font-medium hover:text-secondary transition max-lg:hidden"
           >
             info@zentrosolutions.com
           </Link>
 
-          <Button size="sm" className="hover:bg-primary-hover">Call us today</Button>
+          <Button className="hover:bg-primary-hover md:h-[45px] h-[40px] bg-primary">
+            Call us today
+          </Button>
 
           <button
             type="button"

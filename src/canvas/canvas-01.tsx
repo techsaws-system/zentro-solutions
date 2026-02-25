@@ -62,7 +62,7 @@ export default function Canvas01({ children, className }: Canvas01Props) {
       }}
       className={cn(
         "relative isolate w-full overflow-hidden",
-        "bg-[#001f60]",
+        "bg-[#2e6b3a]",
         "text-white",
         className,
       )}

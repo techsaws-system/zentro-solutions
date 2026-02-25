@@ -15,8 +15,8 @@ function Footer() {
 
           <p className="text-sm text-muted-foreground max-w-xs">
             With Zentro Solutions, live humans cover calls, chat, email, and
-            social media 24/7 so leads, appointments, and customer inquiries
-            are never missed.
+            social media 24/7 so leads, appointments, and customer inquiries are
+            never missed.
           </p>
 
           <div className="flex items-center gap-4 mt-4">
@@ -27,7 +27,8 @@ function Footer() {
               <FaXTwitter />
             </Link>
             <Link
-              href="/"
+              href="https://www.instagram.com/zentrosolutions_"
+              target="_blank"
               className="text-muted-foreground hover:text-heading transition"
             >
               <FaInstagram />
@@ -70,8 +71,8 @@ function Footer() {
           </h4>
 
           <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-            Product updates, pricing changes, and feature launches - sent to you.
-            No spam.
+            Product updates, pricing changes, and feature launches - sent to
+            you. No spam.
           </p>
 
           <form className="flex gap-2 w-full">

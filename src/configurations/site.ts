@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Zentro Solutions",
   shortName: "Zentro",
-  title: "Zentro Solutions | Every Call Answered. Every Customer Covered.",
+  title: "Zentro Solutions. | Every Call Answered. Every Customer Covered.",
   description:
     "Zentro Solutions provides live, 24/7 human coverage for calls, chat, email, and social media messages for businesses of any size. Capture every lead, book more appointments, and deliver exceptional customer experiences without missing a single inquiry.",
 

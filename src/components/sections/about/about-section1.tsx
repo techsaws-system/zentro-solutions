@@ -2,47 +2,54 @@ import Image from "next/image";
 
 export function AboutSection1() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-32 px-6 lg:px-16">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className="space-y-5 sm:space-y-6">
-            {/* Main Heading */}
-            <h2 className="text-[#001a4d] font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight text-balance">
-              Our story
-            </h2>
+    <section className="layout-standard section-padding-standard my-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-heading font-bold text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight text-balance">
+            Our Commitment to{" "}
+            <span className="text-accent">Quality Support</span>
+          </h2>
 
-            {/* Description */}
-            <p className="text-[#1a3a6b] text-base sm:text-lg leading-relaxed">
-              Since 2003, Zentro Solutions has focused on personal connections
-              that help small businesses grow. At the core of our work is a
-              promise to treat every customer interaction as a chance to leave
-              a lasting, positive impression. We are committed to our customers'
-              success, delivering exceptional experiences and a friendly,
-              human touch for the people they serve.
-            </p>
-          </div>
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed font-medium mb-2">
+            At Zentro Solutions, our goal is to provide fast, reliable, and
+            professional customer support that helps businesses improve customer
+            satisfaction and retention. We focus on:
+          </p>
 
-          {/* Right Image */}
-          <div className="relative h-72 sm:h-80 lg:h-96 flex items-center justify-center lg:justify-end max-sm:hidden">
-            <div className="w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
-              {/* Light cream background */}
-              <div className="absolute inset-0 bg-yellow-100 z-0"></div>
+          <ul className="space-y-4 text-base md:text-lg lg:text-xl leading-relaxed font-medium">
+            <li className="flex items-start gap-4">
+              <span className="text-primary font-bold text-xl">✓</span>
+              <span>Quick response times</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-primary font-bold text-xl">✓</span>
+              <span>Professional communication</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-primary font-bold text-xl">✓</span>
+              <span>Dedicated support agents</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="text-primary font-bold text-xl">✓</span>
+              <span>Scalable support solutions</span>
+            </li>
+          </ul>
+        </div>
 
-              {/* Teal accent border on right */}
-              <div className="absolute right-0 top-0 bottom-0 w-2 bg-teal-500 z-10"></div>
+        <div className="relative h-72 md:h-80 lg:h-96 flex items-center justify-center lg:justify-end max-md:hidden">
+          <div className="w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
+            <div className="absolute inset-0 bg-yellow-100 z-0" />
+            <div className="absolute right-0 top-0 bottom-0 w-2 bg-primary z-10" />
 
-              {/* Image container */}
-              <div className="relative z-5 w-full h-full">
-                <Image
-                  src="/images/about-img1.png"
-                  alt="Zentro Solutions team members"
-                  width={500}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
+            <div className="relative z-5 w-full h-full">
+              <Image
+                src="/images/about-img1.png"
+                alt="Zentro Solutions team members"
+                width={500}
+                height={400}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -50,4 +57,3 @@ export function AboutSection1() {
     </section>
   );
 }
-

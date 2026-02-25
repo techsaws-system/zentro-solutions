@@ -1,95 +1,42 @@
+import Image from "next/image";
+
 export function AboutSection3() {
-  const services = [
-    {
-      title: "Live call coverage",
-      description:
-        "Exceptional customer service is one call away. Whether part-time, on-demand, or 24/7, we connect with callers when you can't.",
-      borderColor: "border-cyan-500",
-      accentColor: "#0891b2",
-    },
-    {
-      title: "Multichannel customer engagement",
-      description:
-        "Whether you're aiming to grow, build loyalty, save time, or all three, our unified platform makes it possible.",
-      borderColor: "border-purple-900",
-      accentColor: "#3f0f5c",
-    },
-    {
-      title: "Managed live chat support",
-      description:
-        "Our live chat is run by real people who answer questions, gather details, and drive conversions.",
-      borderColor: "border-pink-400",
-      accentColor: "#f472b6",
-    },
-  ];
-  const mobileServices = [...services, ...services];
-
   return (
-    <section className="w-full bg-gray-50 py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="hidden sm:grid gap-6 md:grid-cols-3">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative rounded-2xl border-4 bg-white p-6 sm:p-8 transition-transform hover:shadow-lg"
-              style={{
-                borderColor: service.accentColor,
-                borderLeft: `4px solid ${service.accentColor}`,
-                borderBottom: `4px solid ${service.accentColor}`,
-                borderTop: "none",
-                borderRight: "none",
-              }}
-            >
-              <h3 className="mb-4 text-2xl font-bold text-slate-900">
-                {service.title}
-              </h3>
-              <p className="mb-6 text-base text-slate-700 leading-relaxed">
-                {service.description}
-              </p>
-              <a
-                href="#"
-                className="inline-block text-lg font-semibold transition-opacity hover:opacity-80"
-                style={{ color: service.accentColor }}
-              >
-                Discover more
-              </a>
-            </div>
-          ))}
-        </div>
+    <section className="bg-gray-50 py-8">
+      <div className="layout-standard section-padding-standard">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="relative h-56 md:h-64 lg:h-72 flex items-center justify-center lg:justify-start order-2 lg:order-1 max-md:hidden">
+            <div className="w-full max-w-md rounded-3xl overflow-hidden shadow-2xl relative">
+              <div className="absolute inset-0 bg-yellow-100 z-0" />
+              <div className="absolute left-0 top-0 bottom-0 w-2 bg-secondary z-10" />
 
-        <div className="sm:hidden overflow-hidden">
-          <div className="auto-scroll-track gap-6">
-            {mobileServices.map((service, index) => (
-              <div
-                key={`${service.title}-${index}`}
-                className="relative rounded-2xl border-4 bg-white p-6 w-[280px]"
-                style={{
-                  borderColor: service.accentColor,
-                  borderLeft: `4px solid ${service.accentColor}`,
-                  borderBottom: `4px solid ${service.accentColor}`,
-                  borderTop: "none",
-                  borderRight: "none",
-                }}
-              >
-                <h3 className="mb-4 text-2xl font-bold text-slate-900">
-                  {service.title}
-                </h3>
-                <p className="mb-6 text-base text-slate-700 leading-relaxed">
-                  {service.description}
-                </p>
-                <a
-                  href="#"
-                  className="inline-block text-lg font-semibold transition-opacity hover:opacity-80"
-                  style={{ color: service.accentColor }}
-                >
-                  Discover more
-                </a>
+              <div className="relative z-5 w-full h-full">
+                <Image
+                  src="/images/about-img1.png"
+                  alt="Product feature showcase"
+                  width={500}
+                  height={400}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
-            ))}
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 order-1 lg:order-2">
+            <h2 className="text-heading font-bold text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight text-balance">
+              Zentro Solutions<span className="text-primary">.</span>{" "}
+              <span className="text-accent">Approach</span>
+            </h2>
+
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed font-medium mb-2">
+              Every business is different. We customize support processes based
+              on your brand tone, refund policies, and customer service
+              standards to ensure consistent and professional communication.
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

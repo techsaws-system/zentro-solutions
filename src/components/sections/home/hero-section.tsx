@@ -10,7 +10,7 @@ function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-6 lg:max-w-3xl items-center text-center lg:items-start lg:text-left">
-          <span className="inline-flex w-fit items-center rounded-full border border-[#fb782f]/50 px-4 py-1 text-xs font-semibold tracking-wide text-primary bg-[#fb782f]/30">
+          <span className="inline-flex w-fit items-center rounded-full border border-[#99c476]/50 px-4 py-1 text-xs font-semibold tracking-wide text-secondary bg-[#99c476]/30">
             Live Human Support, 24/7
           </span>
 
@@ -26,9 +26,8 @@ function HeroSection() {
             secured.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 w-full sm:w-auto">
-            <span className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition md:order-1 order-2 w-full sm:w-auto">
+            <span className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition md:order-1 order-2 w-full sm:w-auto cursor-pointer">
               Get started today
             </span>
 
@@ -74,4 +73,3 @@ function HeroSection() {
 }
 
 export default HeroSection;
-

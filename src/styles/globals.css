@@ -20,11 +20,15 @@
     --primary-foreground: #ffffff;
     --primary-hover: #f56a1f;
 
+    --secondary: #2e6b3a;
+    --secondary-foreground: #ffffff;
+    --secondary-hover: #255c31;
+
     --muted: #f1f5f9;
     --muted-foreground: #64748b;
     --muted-hover: #e2e8f0;
 
-    --accent: #001f60;
+    --accent: #99c476;
     --accent-foreground: #ffffff;
 
     --destructive: #dc2626;

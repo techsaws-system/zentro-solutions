@@ -16,8 +16,8 @@ function ServicesSection() {
 
   return (
     <section>
-      <div className="layout-standard grid lg:grid-cols-3 grid-cols-1 items-center lg:gap-16">
-        <div className="col-span-1 lg:order-1 order-2 hidden md:block">
+      <div className="layout-standard grid lg:grid-cols-3 grid-cols-1 items-center lg:gap-16 max-md:pt-12">
+        <div className="col-span-1 lg:order-1 order-2">
           <Image src={ServicesSectionImg} alt="Service overview illustration" className="max-lg:w-[500px] max-md:w-[350px] mx-auto"/>
         </div>
         <div className="lg:col-span-2 col-span-1 lg:order-2 order-1 max-lg:pt-24 max-md:pt-0">

@@ -30,7 +30,7 @@ function AboutSection() {
                  overflow-hidden
                  rounded-[32px]
                  border-[4px]
-                 border-accent
+                 border-black
                  bg-muted
                "
           >
@@ -63,12 +63,12 @@ function AboutSection() {
                          rounded-full
                          bg-background
                          border-[6px]
-                         border-accent
+                         border-black
                          flex items-center justify-center
                          shadow-lg
                        "
                   >
-                    <Play size={48} className="text-accent fill-accent ml-1" />
+                    <Play size={48} className="text-black fill-black ml-1" />
                   </div>
                 </button>
               )}
